@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form name="frm">
+    <p>다음 빈칸에 올바른 값을 입력하세요</p>
+    <input type="text" name="a1" size="3" value="9" /> +
+    <input type="text" name="a2" size="3" value="3" /> =
+    <input type="text" name="answer" size="3" />
+    <br/><br/>
+    <input type="button" onclick="result()" value="확인"/>
+  </form>
+
+  <script>
+    var inp = document.forms['frm'];
+    var a1 = inp['a1'];
+    var a2 = inp['a2'];
+    var rst = inp['answer'];
+
+    function result() {
+      if (parseInt(a1.value) + parseInt(a2.value) == parseInt(rst.value)) {
+        alert('정답입니다!');
+      } else {
+        alert('오답입니다!');
+      }
+    }
+  </script>
+</body>
+</html>
